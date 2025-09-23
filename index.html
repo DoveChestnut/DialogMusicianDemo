@@ -119,21 +119,23 @@
             <div class="section author">
             </div>
 
-            <!-- 摘要区域 -->
-            <div class="section">
-                <div class="section-title">ABSTRACT</div>
-                <div class="section-content abstract">
-                    Background music generation (BMG) aims to produce expressive music that aligns with video scenes in silent films, playing a significant role in areas such as artistic creation. However, existing methods typically rely solely on visual analysis, neglecting the influence of character dialogues, which often directly shape a movie’s musical style.
-                    To address this gap, we propose a novel framework, termed <i><b>DialogMusician</b></i>, that integrates dialogue knowledge to generate refined background music. Our approach centers around three key innovations: 1) <b>Multi-view knowledge extraction</b>, which deeply analyzes both the semantic and high-level sentiment features of character dialogues within movie clips, forming a comprehensive knowledge system combined with visual information; 2) <b>Multi-view prompt generation</b>, which integrates multi-view knowledge into a unified prompt representation; 3) <b>Refined music generation</b>, which drives LLM to produce background music descriptions with precise timestamp information, ultimately yielding finely expressive music.
-                    Notably, the entire process is training-free, enabling a fully automated and intelligent pipeline. Additionally, we introduce the first Dialogue-Movie-Music (<b>DMM</b>) dataset, rich in character dialogues, to validate the effectiveness of our method. Both subjective and objective experiments demonstrate that our approach achieves more nuanced and expressive results compared to previous methods. Our dataset and code are available at
-                    <a href="https://github.com/DoveChestnut/DialogMusician" target="_blank">https://github.com/DoveChestnut/DialogMusician</a>. 
-                </div>
-            </div>
+			<!-- 摘要区域 -->
+			<div class="section">
+    			<div class="section-title" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">ABSTRACT</div>
+    			<div class="section-content abstract" style="background-color: #e6f2ff; border: 1px solid #ccc; border-radius: 5px; padding: 15px;">
+        
+       				 Background music generation (BMG) aims to produce expressive music that aligns with video scenes in silent films, playing a significant role in areas such as artistic creation. However, existing methods typically rely solely on visual analysis, neglecting the influence of character dialogues, which often directly shape a movie’s musical style.
+       				 To address this gap, we propose a novel framework, termed <i><b>DialogMusician</b></i>, that integrates dialogue knowledge to generate refined background music. Our approach centers around three key innovations: 1) <b>Multi - view knowledge extraction</b>, which deeply analyzes both the semantic and high - level sentiment features of character dialogues within movie clips, forming a comprehensive knowledge system combined with visual information; 2) <b>Multi - view prompt generation</b>, which integrates multi - view knowledge into a unified prompt representation; 3) <b>Refined music generation</b>, which drives LLM to produce background music descriptions with precise timestamp information, ultimately yielding finely expressive music.
+       				 Notably, the entire process is training - free, enabling a fully automated and intelligent pipeline. Additionally, we introduce the first Dialogue - Movie - Music (<b>DMM</b>) dataset, rich in character dialogues, to validate the effectiveness of our method. Both subjective and objective experiments demonstrate that our approach achieves more nuanced and expressive results compared to previous methods. Our dataset and code are available at
+        			<a href="https://github.com/DoveChestnut/DialogMusician" target="_blank">https://github.com/DoveChestnut/DialogMusician</a>.
+   				 </div>
+			</div>
 
             <!-- 模型架构区域 -->
-            <div class="section">
-                <div class="section-title">MODEL ARCHITECTURE</div>
-                <div class="section-content model">
+            <div class="section">             
+				<div class="section-title" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">MODEL ARCHITECTURE</div>
+				<div class="section-content model"></div>
+        
                     <img src="img/model.png" alt="模型架构图" class="model-img">
                     <p style="padding-top: 1rem; color: #a1a1a1; font-size: 1rem; text-align: center;">
                         Figure: The architecture of our proposed model. The model architecture includes two feature extraction modules on the left, with the proposed attention fusion (AF) and attention transfer (AT) methods in the center, and the backend classifier on the right.
@@ -144,69 +146,69 @@
             <!-- 视频演示区域：修复嵌套错误，添加布局容器 -->
 			 
             <div class="section">
-                <div class="section-title">VIDEO DEMO</div>
+                <div class="section-title" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">VIDEO DEMO</div>
                 <div class="section-content model">
                     <!-- 视频容器：垂直排列多个视频，添加间距 -->
                     <div class="video-container">
                         <!-- 视频1：单独闭合标签，添加type属性增强兼容性 -->
                         <div class="video-item">
-							<div class="video-filename">00205_GT.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00205_GT.mp4</div>
                             <video src="Demo/00205_GT.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频2 -->
                         <div class="video-item">
-							<div class="video-filename">00205_ours.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00205_ours.mp4</div>
                             <video src="Demo/00205_ours.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频3：修复文件名（原代码少了.mp4后缀，此处补充） -->
                         <div class="video-item">
-							<div class="video-filename">00205_video2music.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00205_video2music.mp4</div>
                             <video src="Demo/00205_video2music.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频4 -->
                         <div class="video-item">
-							<div class="video-filename">00263_GT.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00263_GT.mp4</div>
                             <video src="Demo/00263_GT.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频5 -->
                         <div class="video-item">
-							<div class="video-filename">00263_ours.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00263_ours.mp4</div>
                             <video src="Demo/00263_ours.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频6 -->
                         <div class="video-item">
-							<div class="video-filename">00263_video2music.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00263_video2music.mp4</div>
                             <video src="Demo/00263_video2music.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频7 -->
                         <div class="video-item">
-							<div class="video-filename">00498_GT.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00498_GT.mp4</div>
                             <video src="Demo/00498_GT.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频8 -->
                         <div class="video-item">
-							<div class="video-filename">00498_ours.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00498_ours.mp4</div>
                             <video src="Demo/00498_ours.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
                         </div>
                         <!-- 视频9 -->
                         <div class="video-item">
-							<div class="video-filename">00498_video2music.mp4</div>
+							<div class="video-filename" style="color: #007bff; font-weight: bold; font-size: 1.3rem; padding-left: 15px;">00498_video2music.mp4</div>
                             <video src="Demo/00498_video2music.mp4" controls class="model-img" type="video/mp4">
                                 您的浏览器不支持视频播放，请更新浏览器。
                             </video>
