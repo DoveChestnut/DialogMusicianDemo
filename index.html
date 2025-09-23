@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Refined Background Music Generation with Dialogue Knowledge Aggregation: Dataset and Training-Free Methodology</title>
+		<link type="text/css" href="./css/basic.css" rel="stylesheet">
+		<link type="text/css" href="./css/index.css" rel="stylesheet">
+		<link type="text/css" href="./css/bootstrap.min.css" rel="stylesheet">
+		<script type='text/javascript' src="./js/jquery-3.3.1.min.js"></script>
+		<script type='text/javascript' src="./js/index.js"></script>
+		
+		
+		
+		
+		<style>
+		    .toggle-content {
+		      display: none; /* 默认隐藏内容 */
+		      margin-top: 10px;
+		    }
+		    .toggle-button {
+		      cursor: pointer;
+		      background-color: #007bff;
+		      color: white;
+		      border: none;
+		      padding: 5px 10px;
+		      border-radius: 3px;
+		      font-size: 14px;
+		    }
+		    .toggle-button:hover {
+		      background-color: #0056b3;
+		    }
+		    table {
+		      width: 100%;
+		      border-collapse: collapse;
+		      margin-top: 10px;
+		    }
+		    th, td {
+		      border: 1px solid #ccc;
+		      padding: 8px;
+		      text-align: center;
+		    }
+		  </style>
+		  
+		  <script>
+		    // 通用表格展开/折叠功能
+		    function toggleTable(tableId) {
+		      const table = document.getElementById(tableId);
+		      const button = document.querySelector(`button[onclick="toggleTable('${tableId}')"]`);
+		      if (table.style.display === 'none' || table.style.display === '') {
+		        table.style.display = 'block';
+		        button.textContent = button.textContent.replace('Show', 'Hide');
+		      } else {
+		        table.style.display = 'none';
+		        button.textContent = button.textContent.replace('Hide', 'Show');
+		      }
+		    }
+		  </script>
+		
+	</head>
+	<body>
+		<div class="main">
+			<div class="title">
+				<img class="top-img" src="img/background.png" />
+				<span>Leveraging Named Entity Knowledge for Robust Partial Audio Deepfake Detection via Attention Aggregation</span>
+			</div>
+			<div class="content">
+				<div class="section author">
+				</div>
+				<div class="section">
+					<div class="section-title">ABSTRACT</div>
+					<div class="section-content abstract">
+						Background music generation (BMG) aims to produce expressive music that aligns with video scenes in silent films, playing a significant role in areas such as artistic creation. However, existing methods typically rely solely on visual analysis, neglecting the influence of character dialogues, which often directly shape a movie’s musical style.
+To address this gap, we propose a novel framework, termed \textit{\textbf{DialogMusician}}, that integrates dialogue knowledge to generate refined background music. Our approach centers around three key innovations: 1) \textbf{Multi-view knowledge extraction}, which deeply analyzes both the semantic and high-level sentiment features of character dialogues within movie clips, forming a comprehensive knowledge system combined with visual information; 2) \textbf{Multi-view prompt generation}, which integrates multi-view knowledge into a unified prompt representation; 3) \textbf{Refined music generation}, which drives LLM to produce background music descriptions with precise timestamp information, ultimately yielding finely expressive music.
+Notably, the entire process is training-free, enabling a fully automated and intelligent pipeline. Additionally, we introduce the first Dialogue-Movie-Music (\textbf{DMM}) dataset, rich in character dialogues, to validate the effectiveness of our method. Both subjective and objective experiments demonstrate that our approach achieves more nuanced and expressive results compared to previous methods. Our dataset and code are available at
+						<a href="https://github.com/DoveChestnut/DialogMusician">https://github.com/DoveChestnut/DialogMusician</a>. 
+					</div>
+				</div>
+				
+				<div class="section">
+					<div class="section-title">MODEL ARCHITECTURE</div>
+					<div class="section-content model">
+						<img src="img/model.png" alt="" class="model-img">
+						
+						<p style="padding-top: 1rem; color: #a1a1a1; font-size: 1rem; text-align: center;">Figure: The architecture of our proposed model. The model architecture includes two feature extraction modules on the left, with the proposed attention fusion (AF) and attention transfer (AT) methods in the center, and the backend classifier on the right.</p>
+					</div>
+				</div>
+				
+
+				<div class="section">
+    					<div class="section-title">VIDEO DEMO</div> <!-- 视频板块标题 -->
+   					 	<div class="section-content model"> <!-- 复用 model 类的样式，和图片板块保持一致 -->
+        							<!-- 视频标签：src 是视频路径，controls 显示播放控件 -->
+        							<video src="Demo/00205_GT.mp4" controls class="model-img" style="max-width:100%;">
+            								您的浏览器不支持视频播放，请更新浏览器。 <!-- 浏览器不兼容时的提示 -->
+        							</video>
+        							<!-- 视频说明文字 -->
+        							<p style="padding-top: 1rem; color: #a1a1a1; font-size: 1rem; text-align: center;">
+            								Video: Demo of partial audio deepfake detection (red segments indicate fake speech)
+        					</p>
+   					 </div>
+				</div>
+								
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
